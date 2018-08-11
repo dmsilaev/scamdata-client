@@ -1,0 +1,163 @@
+.priceboard__types {
+  position: relative;
+  width: calc(100% + #{$dash-ctrl-width});
+  left: 0;
+  z-index: 3;
+  margin-left: -1*$dash-ctrl-width;
+  overflow: hidden;
+
+  &:empty { border-top: 1px solid #ccc; }
+
+  .priceboard__selectable {
+    position: relative;
+
+    &:last-child .priceboard__type {
+      border-bottom: 1px solid #ccc;
+    }
+  }
+
+  .priceboard__type {
+    position: relative;
+    width: 100%;
+    border-top: 1px solid #ccc;
+
+    .priceboard__type-header {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-items: center;
+      height: $pd-type-header-h;
+      padding: 0 1.25rem;
+      background-color: #FFF;
+      border-bottom: 1px solid #ccc;
+
+      .content {}
+
+      .actions {}
+    }
+
+    .priceboard__type-content {
+      padding: 0.75rem 0 0.75rem;
+    }
+  }
+}
+
+$pd-tariff-header-h: 1rem;
+$pd-tariff-header-offset-bt: 0.5rem;
+
+$pd-tariff-values-offset-top: $pd-tariff-header-h + $pd-tariff-header-offset-bt;
+$pd-tariff-values-offset-left: 0;
+$pd-tariff-values-h: 1.5rem;
+
+.priceboard__tariffs {
+  position: relative;
+  width: inherit;
+  height: inherit;
+
+  .priceboard__tariff {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 0.75rem;
+
+    &:first-child { margin-top: 0; }
+
+    .priceboard__tariff-header {
+      height: $pd-tariff-header-h;
+      margin-bottom: $pd-tariff-header-offset-bt;
+      padding: 0 1.25rem;
+      background-color: transparent;
+      z-index: 2;
+      text-align: left;
+      font-size: 0.75rem;
+    }
+
+    .priceboard__tariff-content {
+      flex-grow: 1;
+      z-index: 1;
+      padding-left: $dash-ctrl-width;
+
+      .content {
+        position: relative;
+      }
+    }
+
+    .priceboard_tariff-values {
+      position: absolute;
+      width: $dash-ctrl-width;
+      left: $pd-tariff-values-offset-left;
+      top: $pd-tariff-values-offset-top;
+      text-align: center;
+      background-color: $dash-bg-color;
+      z-index: 2;
+
+      .value {
+        height: $pd-tariff-values-h;
+        line-height: $pd-tariff-values-h;
+        vertical-align: middle;
+      }
+    }
+  }
+}
+
+.priceboard__sitings {
+  position: relative;
+
+  .priceboard__siting {}
+
+  .priceboard__siting.black,
+  .priceboard__siting.alone {
+    .priceboard__value { color: #333333; }
+  }
+
+  .priceboard__siting.purpure,
+  .priceboard__siting.twins {
+    .priceboard__value { color: #D664CF; }
+  }
+
+  .priceboard__siting.green,
+  .priceboard__siting.one_more {
+    .priceboard__value { color: #58CA97; }
+  }
+
+  .priceboard__siting.gray,
+  .priceboard__siting.baby {
+    .priceboard__value { color: #C7C7C7; }
+  }
+}
+
+.priceboard__values {
+  position: relative;
+  width: auto;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  vertical-align: middle;
+  white-space: nowrap;
+
+  .priceboard__value {
+    position: relative;
+    display: inline-block;
+    width: $dash-item-width;
+    font-size: 0.75rem;
+    text-align: center;
+
+    .content {
+      cursor: pointer;
+
+      &.selected:after {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.43);
+      }
+    }
+  }
+
+}

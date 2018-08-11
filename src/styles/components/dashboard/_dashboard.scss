@@ -1,0 +1,18 @@
+.dashboard {
+  position: relative;
+  width: 100%;
+  // max-width: calc(100vw - 16rem);
+  min-height: 100%;
+  overflow: hidden;
+  padding-left: $dash-ctrl-width;
+  padding-top: $dash-ctrl-height;
+  background-color: $dash-bg-color;
+
+  .dashboard__wrapper {
+    position: absolute;
+    width: 100%;
+    min-height: 100%;
+    top: 0;
+    overflow: auto;
+  }
+}

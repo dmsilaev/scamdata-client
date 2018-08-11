@@ -1,0 +1,38 @@
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html {
+	box-sizing: border-box;
+}
+
+body {
+  font-size: 0.875rem;
+}
+
+.wrapper {
+	min-height: 100vh;
+}
+
+.page {
+	min-height: 100vh;
+	@include grid-row;
+}
+
+@for $i from 1 through 100 {
+  &.w#{$i} { width: $i * 1%; }
+}
+
+i.icon {
+  display: inline-block;
+  font-size: inherit;
+
+  svg {
+    stroke: currentColor;
+    fill: currentColor;
+    width: 1em;
+    height: 1em;
+    vertical-align: middle;
+    overflow: hidden;
+  }
+}

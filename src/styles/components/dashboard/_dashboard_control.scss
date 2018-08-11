@@ -1,0 +1,37 @@
+.dashboard__control {
+  .ctrl {
+    position: absolute;
+    top: 0;
+    width: auto;
+    box-sizing: content-box;
+    z-index: 2;
+
+    &.left {
+      left: 0;
+      height: 100%;
+      border-right: 1px solid #ccc;
+    }
+
+    &.right {
+      right: 0;
+      border-left: 1px solid #ccc;
+    }
+
+    a {
+      display: inline-block;
+      width: $dash-ctrl-width;
+      height: $dash-ctrl-height;
+      line-height: $dash-ctrl-height;
+      text-align: center;
+      vertical-align: middle;
+      text-decoration: none;
+      background-color: #FFF;
+      color: #000;
+      font-size: 2rem;
+
+      &:hover {
+        background-color: darken(#fff, 15%);
+      }
+    }
+  }
+}

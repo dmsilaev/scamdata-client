@@ -1,0 +1,37 @@
+.reservations {
+  .reservation + .reservation {
+    margin-top: 0.875rem;
+  }
+}
+
+.reservation {
+  box-shadow: 0 0 0.2rem rgba(0, 0, 0, .13);
+  border: 1px solid #DCD8D2;
+  background-color: #FFF;
+  padding: 1rem 1.875rem;
+
+  .reservation__header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    user-select: none;
+    font-weight: bold;
+    padding-bottom: 0.875rem;
+
+    .price {
+      flex-grow: 1;
+      min-width: 4.5rem;
+      text-align: right;
+    }
+  }
+
+  .reservation__content {
+
+  }
+
+  .reservation__control {
+    padding-top: 1rem;
+  }
+}

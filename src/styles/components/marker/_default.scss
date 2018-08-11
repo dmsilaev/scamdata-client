@@ -1,0 +1,14 @@
+$marker-size: 0.5rem;
+$marker-bg-color: #69AC66;
+
+.marker {
+  display: inline-block;
+  width: $marker-size;
+  height: $marker-size;
+  border-radius: $marker-size/2;
+}
+
+.success {
+  @extend .marker;
+  background-color: $marker-bg-color;
+}

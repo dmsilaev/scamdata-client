@@ -1,0 +1,82 @@
+// Kube
+@import "base/variables";
+@import "~imperavi-kube/src/kube";
+@import "~loaders.css/loaders.min.css";
+
+// Base
+@import 'base/reset';
+@import 'base/base';
+
+// Components
+@import 'components/infinity-menu/default';
+@import 'components/topbar/default';
+@import 'components/buttons/default';
+@import 'components/collapse/default';
+@import 'components/page/default';
+@import 'components/groups/default';
+@import 'components/rooms/default';
+@import 'components/options/default';
+@import 'components/dashboard/default';
+@import 'components/marker/default';
+@import 'components/stepper/default';
+@import 'components/segment/default';
+@import 'components/form/default';
+@import 'components/select/default';
+@import 'components/table/default';
+// @import 'components/tariffs/default';
+@import 'components/price-block/default';
+@import 'components/date-picker/default';
+@import 'components/tickets/default';
+@import 'components/status/default';
+@import 'components/search_page/default';
+@import 'components/geosuggest/default';
+@import 'components/statistic/default';
+@import 'components/counter/default';
+@import 'components/reservation-group/default';
+@import 'components/popover/default';
+@import 'components/list/default';
+@import 'components/travellers-list/default';
+@import 'components/travellers-counter/default';
+@import 'components/result-empty/default';
+@import 'components/travellers/default';
+@import 'components/loader/default';
+@import 'components/message/default';
+@import 'components/notifications/default';
+@import 'components/timeline/default';
+@import 'components/filters/default';
+@import 'components/tags/default';
+@import 'components/sorting/default';
+@import 'components/orders/default';
+@import 'components/reservations/default';
+@import 'components/slots/default';
+@import 'components/policies/default';
+@import 'components/total/default';
+@import 'components/conversations/default';
+
+// Pages
+@import 'pages/layout/layout';
+@import 'pages/login/login';
+
+
+.selectable-group {
+  position: relative;
+  overflow: hidden;
+
+  .group {
+    width: 100%;
+    margin-bottom: 4rem;
+  }
+
+  .item {
+    float: left;
+    width: 3rem;
+    height: 3rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid blue;
+
+    &.selected {
+      background-color: blue;
+    }
+  }
+}

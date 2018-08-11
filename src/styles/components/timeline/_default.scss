@@ -1,0 +1,94 @@
+.timeline {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  padding: 0.875rem 0;
+
+  .timeline__item {
+    position: relative;
+    width: 100%;
+    min-height: 1.75rem;
+
+    &:before {
+      position: absolute;
+      content: '';
+      top: -0.875rem;
+      left: calc(3rem + 0.875rem/2 - 1px);
+      width: 1px;
+      height: calc(100% + 0.875rem);
+      background-color: #DCD8D2;
+    }
+
+    & > .content {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-items: stretch;
+    }
+
+    .time {
+      width: 3rem;
+      flex-shrink: 0;
+      flex-grow: 0;
+      color: #999;
+
+      .value {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+
+    .status {
+      width: 2rem;
+      height: auto;
+      flex-shrink: 0;
+      flex-grow: 0;
+
+      .value {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      span.circle {
+        display: block;
+        width: 0.875rem;
+        height: 0.875rem;
+        border: 0.2rem solid #fff;
+        border-radius: 50%;
+        background-color: #FFF;
+
+        &.created, &.create { border-color: #D2D1CC; }
+        &.booked, &.book { border-color: #1c86f2; }
+        &.filled { border-color: #f7ba45; }
+        &.confirmed, &.confirm { border-color: #41AB42; }
+        &.cancelled, &.cancel { border-color: #FF5656; }
+      }
+
+      span.baloon {
+        display: block;
+        padding: 0.2rem 0.6rem;
+        border: 1px solid #DCD8D2;
+        background-color: #FFF;
+        border-radius: 0.4rem;
+        transform: translateX(-45%);
+      }
+    }
+
+    .description {
+      .title {}
+      .info { color: #999; }
+    }
+  }
+
+  .timeline__item + .timeline__item {
+    margin-top: 0.875rem;
+  }
+
+  .timeline__history + .timeline__history {
+    margin-top: 0.875rem;
+  }
+}

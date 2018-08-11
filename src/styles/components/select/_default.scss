@@ -1,0 +1,46 @@
+@import "./select";
+@import "~react-select/scss/control";
+@import "~react-select/scss/menu";
+@import "~react-select/scss/mixins";
+@import "~react-select/scss/multi";
+@import "~react-select/scss/spinner";
+
+.Select {
+  font-weight: normal;
+}
+
+.Select-control {
+  position: relative;
+  border: none;
+}
+
+.is-open > .Select-control {
+  border: none;
+}
+
+.Select-menu-outer {
+  border: none;
+}
+
+.Select-value, .Select-placeholder {
+  padding-right: 25px !important;
+}
+
+.is-clearable .Select-value {
+  padding-right: 38px !important;
+}
+
+.Select-input > input {
+  padding: 0;
+}
+
+.Select.error {
+  .Select-control {
+    background-color: rgba(240, 60, 105, .1);
+    border: 1px solid #f583a0;
+  }
+}
+
+.Select-arrow-zone {
+  svg { font-size: 1.125rem; }
+}

@@ -1,0 +1,107 @@
+table.table {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  font-size: inherit;
+
+  tr {
+    position: relative;
+    &.deleted { display: none; }
+  }
+
+  td, th {
+    padding: 0.5rem 0.75rem;
+    vertical-align: middle;
+
+    &.align-left { text-align: left; }
+    &.align-right { text-align: right; }
+    &.align-center { text-align: center; }
+  }
+
+  thead {
+    th {
+      cursor: auto;
+      text-align: left;
+      // color: #999999;
+      vertical-align: middle;
+      font-weight: normal;
+      padding-top: 0.75rem;
+      padding-bottom: 0.75rem;
+    }
+
+    &.tight {
+      th { padding-bottom: 0.5rem; }
+    }
+  }
+
+  tbody {
+    span.number {
+      position: absolute;
+      width: 1.875rem;
+      left: -1.875rem;
+      color: #838383;
+      text-align: center;
+    }
+  }
+
+  &.divided {
+    thead tr {
+      border-bottom: 1px solid #EAE9E4;
+
+      th {
+        padding-bottom: 0.125rem;
+        color: #999999;
+      }
+    }
+
+    tbody tr {
+      border-bottom: 1px solid #EAE9E4;
+      &:last-child { border-bottom: none; }
+    }
+  }
+
+  &.selectable {
+    tbody tr {
+      cursor: pointer;
+
+      &.active, &:hover {
+        background-color: #EAE9E4
+      }
+    }
+
+  }
+
+  &.filled {
+    thead tr {
+      background-color: #EAE9E4;
+      text-transform: uppercase;
+
+      th {
+        padding-bottom: 0.75rem;
+        color: inherit;
+      }
+    }
+  }
+
+  &.table:first-child {
+    margin-top: 0rem;
+  }
+
+  &.table:last-child {
+    margin-bottom: 0rem;
+  }
+
+  a.table__action-icon {
+    display: inline-block;
+    height: 1.2rem;
+    margin-right: 1rem;
+    vertical-align: middle;
+  }
+
+  a.action__icon {
+    display: inline-block;
+    color: inherit;
+    font-size: 1.2rem;
+  }
+}
+

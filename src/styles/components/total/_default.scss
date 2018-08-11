@@ -1,0 +1,35 @@
+.total {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.875rem;
+  padding-top: 0.875rem;
+  border-top: 1px solid #D7D3CC;
+
+  .total__description {
+    font-weight: bold;
+  }
+
+  .total__price {
+    display: table;
+
+    .price__item {
+      display: table-row;
+
+      & > div {
+        display: table-cell;
+      }
+
+      .text {
+        text-align: right;
+        padding-right: 1rem;
+      }
+
+      &.disabled {
+        color: #999;
+      }
+    }
+  }
+}

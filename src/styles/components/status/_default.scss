@@ -1,0 +1,46 @@
+$status-size: 0.375rem;
+
+span.status {
+  white-space: nowrap;
+
+  &:before {
+    display: inline-block;
+    content: '';
+    width: $status-size;
+    height: $status-size;
+    margin-right: $status-size;
+    margin-bottom: $status-size / 2;
+    border-radius: 50%;
+    vertical-align: middle;
+  }
+
+  &.confirmed {
+    &:before {
+      background-color: #41AB42;
+    }
+  }
+
+  &.booked {
+    &:before {
+      background-color: #1c86f2;
+    }
+  }
+
+  &.cancelled {
+    &:before {
+      background-color: #FF5656;
+    }
+  }
+
+  &.draft {
+    &:before {
+      background-color: #f7ba45;
+    }
+  }
+
+  &.new {
+    &:before {
+      background-color: #D2D1CC;
+    }
+  }
+}

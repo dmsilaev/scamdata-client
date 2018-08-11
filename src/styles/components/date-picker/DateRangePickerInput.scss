@@ -1,0 +1,103 @@
+@import "variables";
+
+.DateRangePickerInput {
+  display: inline-block;
+  width: 100%;
+  background-color: $react-dates-color-white;
+  border: 1px solid $react-dates-color-gray-lighter;
+  border-radius: 4px;
+  background-color: #D2D1CC;
+  white-space: nowrap;
+  text-align: center;
+
+  .error & {
+    background-color: rgba(240, 60, 105, .1);
+    border: 1px solid #f583a0;
+  }
+}
+
+.DateRangePickerInput--disabled {
+  background: $react-dates-color-gray-lighter;
+}
+
+.DateRangePickerInput--rtl {
+  direction: rtl;
+}
+
+.DateRangePickerInput__arrow {
+  display: inline-block;
+  vertical-align: middle;
+  width: 10%;
+  text-align: center;
+}
+
+.DateRangePickerInput__arrow svg {
+  vertical-align: middle;
+  fill: $react-dates-color-text;
+  height: $react-dates-width-arrow;
+  width: $react-dates-width-arrow;
+}
+
+.DateRangePickerInput__clear-dates {
+  background: none;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  overflow: visible;
+
+  position: absolute;
+  top: 0;
+  right: 10px;
+  margin: 0;
+  padding: 0;
+  vertical-align: middle;
+}
+
+.DateRangePickerInput__close-icon {
+  display: inline-block;
+  width: auto;
+  height: 2rem;
+  line-height: 1.8rem;
+  font-size: 1rem;
+  color: #333;
+  cursor: pointer;
+}
+
+.DateRangePickerInput__clear-dates--hide {
+  visibility: hidden;
+}
+
+.DateRangePickerInput__clear-dates:focus,
+.DateRangePickerInput__clear-dates--hover {
+  // background: $react-dates-color-border;
+  // border-radius: 50%;
+  background: none !important;
+  color: #333 !important;
+}
+
+.DateRangePickerInput__calendar-icon {
+  background: none;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  // line-height: normal;
+  overflow: visible;
+
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 8px;
+  margin: 0;
+
+  svg {
+    fill: #333;
+    height: 16px;
+    width: 16px;
+    vertical-align: middle;
+  }
+
+  &:hover {
+    background: none;
+    border: none;
+  }
+}

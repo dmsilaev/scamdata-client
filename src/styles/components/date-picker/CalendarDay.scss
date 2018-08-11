@@ -1,0 +1,155 @@
+@import "variables";
+
+.CalendarDay {
+  border: 1px solid lighten($react-dates-color-border-light, 3);
+  padding: 0;
+  box-sizing: border-box;
+  color: $react-dates-color-gray;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.CalendarDay__button {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  background: none;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  cursor: pointer;
+  box-sizing: border-box;
+
+  &:active {
+    outline: 0;
+  }
+
+  &:hover {
+    background-color: inherit;
+    border: none !important;
+    border-radius: none !important;
+    color: $react-dates-color-gray;
+  }
+}
+
+// This order is important.
+.CalendarDay--highlighted-calendar {
+  background: $react-dates-color-highlighted;
+  color: $react-dates-color-gray;
+  cursor: default;
+
+  &:active {
+    background: $react-dates-color-secondary;
+  }
+}
+
+.CalendarDay--outside {
+  pointer-events: none;
+  border: 0;
+  cursor: default !important;
+  color: #999;
+  background-color: #fff !important;
+  border-color: none !important;
+  border: 0 !important;
+  color: #999 !important;
+}
+
+.CalendarDay--hovered {
+  background: lighten($react-dates-color-border-light, 3);
+  border: 1px double darken($react-dates-color-border-light, 3);
+  color: inherit;
+}
+
+.CalendarDay--blocked-minimum-nights {
+  color: $react-dates-color-gray-lighter;
+  background: $react-dates-color-white;
+  border: 1px solid lighten($react-dates-color-border-light, 3);
+  cursor: default;
+
+  &:active {
+    background: $react-dates-color-white;
+  }
+}
+
+.CalendarDay--selected-span {
+  background: $react-dates-color-primary-shade-2;
+  border: 1px double $react-dates-color-primary-shade-1;
+  color: #333;
+
+  &.CalendarDay--hovered,
+  &:active {
+    background: $react-dates-color-primary-shade-1;
+    border: 1px double $react-dates-color-primary;
+  }
+
+  &.CalendarDay--last-in-range {
+    border-right: $react-dates-color-primary;
+  }
+
+  &:hover {
+    border: 1px double $react-dates-color-primary-shade-1;
+
+    button {
+      color: $react-dates-color-white;
+    }
+  }
+}
+
+.CalendarDay--hovered-span,
+.CalendarDay--after-hovered-start {
+  background: $react-dates-color-primary-shade-4;
+  border: 1px double #52AB18;
+  color: $react-dates-color-secondary;
+
+  &:active {
+    background: $react-dates-color-primary-shade-3;
+  }
+}
+
+.CalendarDay--selected-start,
+.CalendarDay--selected-end,
+.CalendarDay--selected {
+  background: #52AB18;
+  border: 1px double #52AB18;
+  color: $react-dates-color-white;
+
+  &:active {
+    background: $react-dates-color-primary;
+  }
+
+  &:hover button {
+    color: $react-dates-color-white;
+  }
+}
+
+.CalendarDay--blocked-calendar {
+  background: $react-dates-color-gray-lighter;
+  color: $react-dates-color-gray-light;
+  cursor: default;
+
+  &:active {
+    background: $react-dates-color-gray-lighter;
+  }
+}
+
+.CalendarDay--blocked-out-of-range {
+  color: $react-dates-color-gray-lighter;
+  background: $react-dates-color-white;
+  border: 1px solid lighten($react-dates-color-border-light, 3);
+  cursor: default;
+
+  &:active {
+    background: $react-dates-color-white;
+  }
+
+  &:hover button {
+    cursor: default;
+    color: $react-dates-color-gray-lighter;
+  }
+}

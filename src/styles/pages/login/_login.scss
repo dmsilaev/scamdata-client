@@ -1,0 +1,11 @@
+.page__login {
+  height: 100%;
+  background-color: #FFF;
+
+  .container {
+    @include grid-row;
+    max-width: 80rem;
+    height: 100%;
+    margin: 0 auto;
+  }
+}

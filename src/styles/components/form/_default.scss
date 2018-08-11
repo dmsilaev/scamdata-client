@@ -1,0 +1,244 @@
+@import "./search__form";
+@import "./dropzone";
+@import "./divider";
+
+textarea { resize: vertical; }
+
+form {
+  margin-bottom: 0;
+  width: 100%;
+}
+
+form.size400 {
+  width: 25rem;
+}
+
+form .form-item {
+  margin-bottom: 1rem;
+  &:last-child { margin-bottom: 0rem; }
+}
+
+form .form-buttons {
+  padding-top: 1rem;
+}
+
+.form {
+  margin: 0;
+
+  &.equal {
+    .form__body > .form__fields:not(:first-child) label {
+      display: none;
+    }
+
+    .form__body > .form__fields-group:not(:first-child) .form__fields:first-child label {
+      display: none;
+    }
+  }
+
+  .form__body {
+    width: inherit;
+    height: inherit;
+  }
+
+  .form__fields-wrapper {
+    margin-bottom: 1.75rem;
+    &:last-child { margin-bottom: 0; }
+  }
+
+  .form__control {
+    margin-top: 2.5rem;
+
+    button + button,
+    .button + .button {
+      margin-left: 0.75rem;
+    }
+
+    span.or {
+      display: none;
+      margin: 0 0.75rem;
+    }
+
+    button + .or,
+    .button + .or { display: inline-block; }
+  }
+
+  .form__fields-group {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    padding: 1rem 0;
+
+    &.last-child { margin-bottom: 0; }
+  }
+
+  .form__fields {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+
+    .form__field {
+      flex-grow: 1;
+      margin-right: 0.75rem;
+      margin-bottom: 0rem;
+      &:last-child { margin-right: 0rem; }
+      &.nogrow { flex-grow: 0; }
+    }
+
+    &:last-child { margin-bottom: 0; }
+
+    &.deleted { display: none; }
+
+    &.padded {
+      margin: 1rem 0;
+    }
+  }
+
+  .form__field {
+    position: relative;
+    margin-bottom: 1rem;
+    &:last-child { margin-bottom: 0rem; }
+
+
+    .form__field-number {
+      display: inline-block;
+      position: absolute;
+      width: 1.875rem;
+      left: -1.875rem;
+      bottom: calc(0.5rem - 1px);
+      color: #838383;
+      vertical-align: bottom;
+      text-align: center;
+    }
+
+    .form__field-action {
+      display: inline-block;
+      width: 1.75rem;
+      height: 2rem;
+      margin: 0;
+      line-height: 2rem;
+      text-align: center;
+      vertical-align: middle;
+      text-decoration: none;
+    }
+
+    .form__field-promt {
+      margin-top: 0.5rem;
+      color: #999999;
+    }
+
+    .loader {
+      position: absolute;
+      top: 0;
+      right: -25%;
+      max-height: 2rem;
+      justify-content: flex-end;
+      transform: scale(0.5);
+      padding-right: 1rem;
+    }
+  }
+
+  .form__field.calendar {
+    & > div {
+      margin: 0 auto;
+      border: none;
+      box-shadow: none;
+    }
+  }
+
+  .form__field.numbered {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+
+    label {
+      flex-shrink: 0;
+      margin-right: 0.5rem;
+      margin-bottom: 0;
+    }
+
+    input {
+      width: 2rem;
+      height: 1.125rem;
+      line-height: 1.125rem;
+      border: none;
+      border-bottom: 1px solid #D2D1CC;
+      border-radius: 0;
+      padding: 0;
+      text-align: center;
+
+      &:focus {
+        box-shadow: none;
+      }
+    }
+  }
+
+  .form__field.centered {
+    & > * { margin: 0 auto; }
+    text-align: center;
+  }
+
+  .form__field.inline {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+
+    &.price > input {
+      width: 5.6rem;
+      margin-right: 0.5rem;
+    }
+
+    &.tight {
+      margin-bottom: 0.25rem;
+      &:last-child { margin-bottom: 0; }
+    }
+
+    label {
+      flex-grow: 1;
+      margin-bottom: 0;
+    }
+
+    input {
+      flex-grow: 0;
+    }
+  }
+
+  .form__field.empty {
+    margin-bottom: 0;
+  }
+
+  .form__field.action {
+    margin-top: 1.25rem;
+  }
+
+  .form__field--desc {
+    margin-top: 0.875rem;
+    color:  #999;
+
+    &.right {
+      text-align: right;
+    }
+  }
+
+  .buttons {
+    button + button,
+    .button + .button {
+      margin-left: 0.875rem;
+    }
+  }
+
+  .form__field, .form__body {
+    @for $i from 1 through 100 {
+      &.w#{$i} { width: $i * 1%;  min-width: $i * 1%; }
+    }
+  }
+}
+

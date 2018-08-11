@@ -1,0 +1,19 @@
+.filter__status {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: -0.875rem;
+
+  .item {
+    width: 50%;
+    margin-bottom: 0.875rem;
+
+    label {
+      margin-bottom: 0;
+      user-select: none;
+      font-size: 0.875rem;
+      cursor: pointer;
+    }
+  }
+}

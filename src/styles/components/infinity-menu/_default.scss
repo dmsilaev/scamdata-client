@@ -1,0 +1,60 @@
+$infinity-menu-item-color: #FFFFFF;
+$infinity-menu-item-offset: 1.25rem;
+$infinity-menu-item-height: 3rem;
+
+$infinity-menu-item-bg: #2f343a;
+$infinity-menu-item-bg-active: #2f343a;
+$infinity-menu-item-bg-hover: #000000;
+
+.infinity-menu-container {
+  color: $infinity-menu-item-color;
+  overflow: hidden;
+
+  ul {
+    margin: 0;
+  }
+}
+
+.infinity-menu-node-container {
+  height: $infinity-menu-item-height;
+  line-height: $infinity-menu-item-height;
+  vertical-align: middle;
+
+  a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    padding: 0 $infinity-menu-item-offset;
+    color: inherit;
+    text-decoration: none;
+
+    &:hover, &.active {
+      background-color: $infinity-menu-item-bg-active;
+    }
+  }
+
+  &.active {
+    background-color: $infinity-menu-item-bg-active;
+  }
+}
+
+.infinity-menu-leaf-container {
+  height: $infinity-menu-item-height;
+  line-height: $infinity-menu-item-height;
+  vertical-align: middle;
+
+  a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    padding: 0 $infinity-menu-item-offset;
+    padding-left: 2*$infinity-menu-item-offset;
+    background-color: $infinity-menu-item-bg;
+    color: inherit;
+    text-decoration: none;
+
+    &.active, &:hover {
+      background-color: $infinity-menu-item-bg-hover;
+    }
+  }
+}

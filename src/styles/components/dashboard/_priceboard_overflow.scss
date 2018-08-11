@@ -1,0 +1,46 @@
+.priceboard__overflow {
+  position: absolute;
+  width: 100%;
+  height: calc(100% - #{$pd-type-header-h});
+  bottom: 0;
+  left: 0;
+  background-color: $pd-overflow-bg-color;
+  z-index: 9999;
+}
+
+.priceboard__form {
+  position: absolute;
+  width: 20rem;
+  height: 6rem;
+  top: 1rem;
+  left: 10rem;
+  border-radius: 0.25rem;
+  background-color: rgba(255,255,255, 0.32);
+
+  form {
+    position: absolute;
+
+    input {
+      width: 3.125rem;
+      height: 1.5rem;
+      font-size: 0.75rem;
+      border-radius: 0.25rem;
+      border: none;
+      margin: 0;
+    }
+
+    .fields {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-items: stretch;
+
+      .field {
+        margin-right: 0.15rem;
+        &:last-child { margin-right: 0; }
+      }
+    }
+
+  }
+}

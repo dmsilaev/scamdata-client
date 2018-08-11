@@ -1,0 +1,101 @@
+.dashboard__grid {
+  position: absolute;
+  top: 0;
+  width: auto;
+  height: 100%;
+  z-index: 1;
+
+  .dashboard__grid-items {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    width: auto;
+    height: inherit;
+  }
+
+  .dashboard__grid-item {
+    position: relative;
+    width: $dash-item-width;
+    height: calc(100% - #{$dash-ctrl-height});
+    border-right: 1px solid #ccc;
+    box-sizing: border-box;
+    margin-top: $dash-ctrl-height;
+    overflow: visible;
+
+    &:first-child { border-left: 1px solid #ccc; }
+
+
+    .header {
+      position: absolute;
+      top: -1*$dash-ctrl-height;
+      width: calc(100% + 1px);
+      height: $dash-ctrl-height;
+    }
+
+    .header__label {
+      width: 100%;
+      height: 2rem;
+      line-height: 2rem;
+      text-align: center;
+      vertical-align: middle;
+    }
+
+    .header__value {
+      width: calc(100% - 0.5px);
+      height: 2.5rem;
+      line-height: 1rem;
+      border-right: 1px solid #ccc;
+      z-index: 1;
+
+      span {
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+      }
+
+      span.day {
+        font-size: 0.75rem;
+        color: #999999;
+      }
+
+      .month {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        height: 2rem;
+        line-height: 2rem;
+        padding-left: 1rem;
+        text-transform: capitalize;
+        vertical-align: middle;
+        color: #999999;
+      }
+    }
+  }
+
+  .dashboard__grid-item.day-off {
+    background-color: $dash-item-bg-day-off;
+
+    .header {
+      background-color: $dash-item-bg-day-off;
+      span.day { color: #ff9595; }
+    }
+  }
+
+  .dashboard__grid-item.week-start {
+    .header {
+      left: -1px;
+      border-left: 1px solid #ccc;
+      width: calc(100% + 2px);
+    }
+
+    .header__value { border-left: none; }
+  }
+
+  .dashboard__grid-item.week-end {
+    .header { border-right: 1px solid #ccc; }
+    .header__value { border-right: none; }
+  }
+}

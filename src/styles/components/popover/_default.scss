@@ -1,0 +1,43 @@
+@import "./filter";
+
+.Popover {
+  margin-top: -1rem;
+  z-index: 999;
+
+  .Popover-tip {
+    z-index: 999;
+  }
+
+  &.Popover-left {
+    order: 1;
+
+    .Popover-body {
+      border-right: none;
+    }
+  }
+
+  &.Popover-right {
+    order: 0;
+  }
+
+  &.Popover-order {
+    margin-top: 0;
+    margin-left: 1.875rem;
+  }
+}
+
+.Popover-body {
+  display: inline-flex;
+  flex-direction: column;
+  background: #ffffff;
+  border-radius: 0.25rem;
+  border: 1px solid #DCD8D2;
+  // border-right: none;
+  box-shadow: 0 0 0.2rem rgba(0,0,0,0.13);
+}
+
+
+.Popover-tipShape {
+  fill: #ffffff;
+  stroke: #DCD8D2;
+}

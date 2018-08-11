@@ -1,0 +1,45 @@
+@mixin button-extended($color-text, $color-back) {
+  @include button($color-text, $color-back);
+
+  &:hover {
+    color: $color-text;
+    background-color: darken($color-back, 15%);
+  }
+}
+
+button,
+.button svg {
+  font-size: 1rem;
+}
+
+button,
+.button {
+  box-sizing: border-box !important;
+}
+
+.button.green {
+  @include button-extended(#fff, #41AB42);
+}
+
+.button.gray {
+  @include button-extended(#333333, #D2D1CC);
+}
+
+.button.dark {
+  @include button-extended(#fff, rgba(210, 209, 204, 0.1));
+}
+
+.button.red {
+  @include button-extended(#fff, #FF5656);
+}
+
+button, .button {
+  &.disabled { pointer-events: none; }
+}
+
+.buttons {
+  button + button,
+  .button + .button {
+    margin-left: 0.875rem;
+  }
+}

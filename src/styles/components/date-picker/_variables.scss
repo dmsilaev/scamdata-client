@@ -1,0 +1,36 @@
+$react-dates-width-arrow: 1rem !default;
+$react-dates-width-icon: 1rem !default;
+$react-dates-width-input: 45% !default;
+$react-dates-width-tooltip-arrow: 20px !default;
+$react-dates-spacing-vertical-picker: 56px !default;
+
+$react-dates-color-primary: #00a699 !default;
+$react-dates-color-primary-dark: #008489 !default;
+$react-dates-color-primary-shade-1: #8CD788 !default;
+$react-dates-color-primary-shade-2: #c6ebc4 !default;
+$react-dates-color-primary-shade-3: #80e8e0 !default;
+$react-dates-color-primary-shade-4: #8CD788 !default;
+$react-dates-color-secondary: #007a87 !default;
+$react-dates-color-white: #fff !default;
+$react-dates-color-gray: #565a5c !default;
+$react-dates-color-gray-dark: darken($react-dates-color-gray, 10.5%) !default;
+$react-dates-color-gray-light: lighten($react-dates-color-gray, 17.8%) !default;   // #82888a
+$react-dates-color-gray-lighter: lighten($react-dates-color-gray, 45%) !default;     // #cacccd
+$react-dates-color-gray-lightest: lighten($react-dates-color-gray, 60%) !default;
+$react-dates-color-highlighted: #ffe8bc !default;
+
+$react-dates-color-border: #dbdbdb !default;
+$react-dates-color-border-light: #dce0e0 !default;
+$react-dates-color-border-medium: #c4c4c4 !default;
+$react-dates-color-placeholder-text: #333 !default;
+$react-dates-color-text: #333 !default;
+$react-dates-color-text-focus: #007a87 !default;
+$react-dates-color-focus: #99ede6 !default;
+
+$react-dates-z-index: 1 !default;
+
+$react-dates-input-font-size: 14px !default;
+$react-dates-input-line-height: 14px !default;
+$react-dates-input-padding: 4px !default;
+$react-dates-input-displaytext-padding-horizontal: 8px !default;
+$react-dates-input-displaytext-padding-vertical: 4px !default;

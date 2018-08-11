@@ -1,0 +1,19 @@
+.groups {
+  position: relative;
+  width: 100%;
+}
+
+.groups__item + .groups__item {
+  margin-top: 2rem;
+}
+
+.groups__item-header {
+  font-size: 1.25rem;
+  padding: 1rem 0;
+}
+
+.groups__item-content {
+  width: auto;
+  height: auto;
+  background-color: #FFF;
+}

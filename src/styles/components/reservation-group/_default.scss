@@ -1,0 +1,69 @@
+.reservation-group {
+  .reservation-group__header {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .reservation-group__content {
+    .section + .section {
+      margin-top: 1.5rem;
+    }
+
+    .section {
+      .section__caption {
+        font-size: 1.25rem;
+        line-height: 1.5rem;
+        margin-bottom: 1rem;
+
+        .sub {
+          font-size: 1rem;
+        }
+      }
+
+      .section__header {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: stretch;
+        cursor: pointer;
+        user-select: none;
+        margin-bottom: 1rem;
+        line-height: 1.25rem;
+
+        .content {
+          font-weight: bold;
+
+          .sub {
+            font-weight: normal;
+          }
+        }
+
+        .price {
+          flex-shrink: 0;
+          font-size: 1rem;
+        }
+
+
+        .content + .price {
+          margin-left: 0.875rem;
+        }
+      }
+
+      &.divided {
+        padding-bottom: 1rem;
+        border-bottom: 1px solid #ddd;
+      }
+
+      &.outside {
+        margin-left: -1.875rem;
+        margin-right: -1.875rem;
+      }
+    }
+  }
+
+  & + .reservation-group {
+    margin-top: 1.5rem;
+  }
+}

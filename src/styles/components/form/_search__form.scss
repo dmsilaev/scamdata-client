@@ -1,0 +1,18 @@
+.search__form {
+  .search__filter {
+    display: inline-block;
+    vertical-align: middle;
+
+    &.dates {
+      min-width: 16rem;
+    }
+
+    &.places {
+      min-width: 32rem;
+    }
+  }
+
+  .search__filter + .search__filter {
+    margin-left: 0.875rem;
+  }
+}

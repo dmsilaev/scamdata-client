@@ -1,0 +1,118 @@
+@import "./item__description";
+@import "./search__hotel";
+@import "./search__item";
+
+.search_page {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  width: 100%;
+  height: 100%;
+  background-color: #EAE9E4;
+
+  .search_map,
+  .search_items,
+  .search_reservations {
+    height: calc(100vh - 5rem);
+  }
+
+  .search_map {
+    flex-grow: 1;
+    border-right: 1px solid #DCD8D2;
+    border-left: 1px solid #DCD8D2;
+    box-shadow: 0 0 0.2rem rgba(0,0,0,0.13);
+  }
+
+  .search_info {
+    position: absolute;
+    flex-shrink: 0;
+    width: 32rem;
+    height: calc(100vh - 5rem);
+    padding: 0.875rem 1rem;
+    overflow: auto;
+    z-index: 9;
+
+    .content {
+      display: flex;
+      position: relative;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-items: stretch;
+      width: 100%;
+      height: 100%;
+
+      .search-info__header {
+        position: relative;
+        height: 5rem;
+        margin-bottom: 0.875rem;
+        background-color: #FFF;
+        border: 1px solid #DCD8D2;
+        // box-shadow: 0 0 0.2rem rgba(0,0,0,0.13);
+
+        .header {
+          font-size: 1.25rem;
+          line-height: 3rem;
+          padding: 0 0.875rem;
+          vertical-align: middle;
+        }
+
+        .tools {
+          display: flex;
+          position: absolute;
+          bottom: -1px;
+          left: 0;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          justify-content: flex-start;
+          align-items: stretch;
+
+          .tools__item {
+            padding: 0.45rem 0.875rem;
+
+            a {
+              display: inline-block;
+              color: inherit;
+              text-decoration: none;
+            }
+
+            &.active {
+              font-weight: bold;
+              border-bottom: 2px solid #52AB18;
+            }
+          }
+        }
+      }
+
+      .search-info__content {
+        height: calc(100% - 6rem);
+      }
+    }
+  }
+
+  .search_items {
+    flex-shrink: 0;
+    width: 32rem;
+    padding: 0 1rem;
+    overflow: auto;
+
+    .search__item {
+      border: 1px solid #DCD8D2;
+      box-shadow: 0 0 0.2rem rgba(0,0,0,0.13);
+      margin-bottom: 1rem;
+
+      &:hover {
+        cursor: pointer;
+        box-shadow: 0 0 0.5rem rgba(0,0,0,0.13);
+
+        .images__wrapper {
+          width: 106%;
+          height: 106%;
+          margin-left: -3%;
+        }
+      }
+    }
+  }
+}

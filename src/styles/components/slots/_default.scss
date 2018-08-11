@@ -1,0 +1,54 @@
+.slots {
+  .slots__row > .caption {
+    line-height: 1rem;
+    margin-top: 0.875rem;
+  }
+
+  .slots__row > .content {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: no-wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0.4125rem 0;
+
+    .slots__number {
+      position: absolute;
+      left: -1.875rem;
+      width: 1.875rem;
+      text-align: center;
+      color: #999;
+    }
+
+    .slots__column + .slots__column {
+      margin-left: 1rem;
+    }
+
+    .slots__column {
+      &.title {
+        max-width: 70%;
+        flex-grow: 1;
+      }
+
+      .icon {
+        font-size: 1.2rem;
+        margin-left: 0.45rem;
+      }
+    }
+  }
+
+  a.action-icon {
+    font-size: 1.2rem;
+    color: inherit;
+    line-height: 1;
+    cursor: pointer;
+  }
+
+  &.divided {
+    .slots__row + .slots__row {
+      border-top: 1px solid #EAE9E4;
+    }
+  }
+}

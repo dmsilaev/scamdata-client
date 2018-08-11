@@ -1,0 +1,78 @@
+$menu-bg-color: #3B4149;
+$menu-font-color: #FFFFFF;
+$menu-width: 16rem;
+
+$menu-header-height: 5rem;
+$menu-header-offset: 1.25rem;
+
+.layout__menu {
+  position: fixed;
+  flex-grow: 0;
+  width: $menu-width;
+  min-width: $menu-width;
+  height: 100vh;
+  color: $menu-font-color;
+  background-color: $menu-bg-color;
+  z-index: 100;
+
+  .layout__menu-wrapper {
+    position: relative;
+    width:inherit;
+    height: inherit;
+    min-height: 26rem;
+  }
+}
+
+.layout-menu__header {
+  position: relative;
+  width: 100%;
+  height: $menu-header-height;
+  padding: 0 $menu-header-offset;
+  line-height: $menu-header-height;
+  overflow: hidden;
+  text-transform: uppercase;
+  vertical-align: middle;
+
+  a {
+    position: absolute;
+    display: inline-block;
+    width: 3rem;
+    height: $menu-header-height;
+    line-height: $menu-header-height;
+    right: 0;
+    top: 0;
+    font-size: 1.2rem;
+    color: inherit;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+
+    &:hover {
+      background-color: #2F343A;
+    }
+  }
+}
+
+.layout__menu-content {
+  //
+}
+
+.layout__menu-action {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+
+  .content {
+    padding: 1.25rem;
+
+    .item + .item {
+      margin-top: 0.875rem;
+    }
+
+    .item > a {
+      color: #FFF;
+      text-decoration: none;
+    }
+  }
+}

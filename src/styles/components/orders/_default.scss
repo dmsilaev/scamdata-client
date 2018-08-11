@@ -1,0 +1,87 @@
+.orders-table {
+  display: table;
+  width: 100%;
+
+  .orders-table__header {
+    display: table-header-group;
+  }
+
+  .orders-table__body {
+    display: table-row-group;
+
+    .orders-table__tr {
+      cursor: pointer;
+
+      &.active, &:hover {
+        background-color: #EAE9E4;
+      }
+    }
+  }
+
+  .orders-table__tr {
+    display: table-row;
+    width: 100%;
+
+    &:last-child {
+      .orders-table__th, .orders-table__td {
+        border-bottom: none;
+      }
+    }
+  }
+
+  .orders-table__th, .orders-table__td {
+    position: relative;
+    display: table-cell;
+    padding-left: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    vertical-align: middle;
+    border-bottom: 1px solid #EAE9E4;
+
+    &.travellers { width: 22%; }
+    &.date { width: 10%; }
+    &.manager { width: 15%; }
+    &.hotel { width: 22%; }
+    &.status { width: 15%; }
+    &.created_at { width: 10%; }
+  }
+
+  .orders-table__th {
+    background-color: #EAE9E4;
+    font-weight: bold;
+
+    .icon { display: none; }
+
+    &.active {
+      border-bottom: 2px solid $color-success;
+
+      &.sort > .icon { display: inline-block; }
+    }
+
+    &.sort {
+      cursor: pointer;
+
+      .icon {
+        display: none;
+        float: right;
+        font-size: 1.125rem;
+        margin-left: 0.1rem;
+      }
+    }
+  }
+
+  .orders-table__filter {
+    width: 100%;
+    // height: 100%;
+    padding: 0;
+    padding-left: 0;
+    margin-left: -1rem;
+
+    &.double {
+      position: absolute;
+      width: 200%;
+      top: 1rem;
+      z-index: 1;
+    }
+  }
+}

@@ -1,0 +1,138 @@
+$segment-offset: 1.875rem 1.875rem 2.5rem;
+$segment-border: 1px solid #DCD8D2;
+$segment-shadow: 0 1px 0.5rem #dedede;
+
+.segment {
+  width: inherit;
+  height: inherit;
+  padding: $segment-offset;
+  border: $segment-border;
+  box-sizing: border-box;
+  background-color: #FFF;
+
+  .segment__header {
+    position: relative;
+    min-height: 14rem;
+
+    .text {
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: #fff;
+      font-size: 1.25rem;
+      line-height: 1.5rem;
+
+      .sub {
+        font-size: 0.875rem;
+      }
+    }
+
+    .images {
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin-top: -1.875rem;
+      margin-left: -1.875rem;
+      margin-right: -1.875rem;
+
+      &:after {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 40%;
+        top: 0;
+        left: 0;
+        @include gradient-vertical-to-opacity(rgba(0,0,0, 0.7), 0);
+      }
+    }
+  }
+
+  .segment__content {
+    .section + .section {
+      margin-top: 1.875rem;
+    }
+
+    .section {
+      position: relative;
+
+      .section__loader {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background-color: rgba(255, 255, 255, 0.5);
+
+        .content {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+
+      .section__caption {
+        font-size: 1.25rem;
+        line-height: 1.5rem;
+        margin-bottom: 1rem;
+
+        .sub { font-size: 1rem }
+      }
+
+      .section__header {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: stretch;
+        cursor: pointer;
+        user-select: none;
+        margin-bottom: 1rem;
+        line-height: 1.25rem;
+        font-weight: bold;
+
+        .sub {
+          font-weight: normal;
+        }
+
+        .price {
+          flex-shrink: 0;
+          font-size: 1rem;
+        }
+      }
+
+      .section__actions {
+        position: absolute;
+        right: 0;
+        bottom: 1rem;
+      }
+
+      .section__footer {
+        padding-top: 1.25rem;
+        padding-bottom: 1.875rem;
+      }
+
+
+      &.divided {
+        padding-bottom: 1rem;
+        border-bottom: 1px solid #DCD8D2;
+      }
+
+      &.outside {
+        margin-left: -1.875rem;
+        margin-right: -1.875rem;
+      }
+    }
+  }
+
+  .segment__actions {
+    margin-top: 1.625rem;
+    padding-top: 1.625rem;
+    border-top: 1px solid #DCD8D2;
+  }
+
+  &.shadow {
+    box-shadow: $segment-shadow;
+  }
+}

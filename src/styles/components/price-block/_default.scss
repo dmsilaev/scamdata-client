@@ -1,0 +1,46 @@
+.price-block {
+}
+
+.price-block__item {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-content: center;
+
+  margin-bottom: 0.5rem;
+  &:last-child { margin-bottom: 0 }
+
+  .icon, .price {
+    height: 1.2rem;
+  }
+
+  .icon {
+    margin-right: 0.25rem;
+  }
+
+  .price {
+    line-height: 1.2rem;
+    vertical-align: middle;
+  }
+
+  &.black,
+  &.alone {
+    color: #333333;
+  }
+
+  &.purpure,
+  &.twins {
+    color: #D664CF;
+  }
+
+  &.green,
+  &.one-more {
+    color: #58CA97;
+  }
+
+  &.gray,
+  &.baby {
+    color: #C7C7C7;
+  }
+}
