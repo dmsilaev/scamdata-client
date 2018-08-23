@@ -10,49 +10,34 @@ import {
 
 // import PrivateRoute from "./shared/components/PrivateRoute";
 //
-// import Menu from './shared/components/Menu';
+import Menu from './shared/components/Menu';
 // import Notifications from "./Notifications";
 // import Orders from "./Orders";
-// import Login from "./Login";
+import Start from "./Start";
 // import NotFound from "./NotFound";
 //
-
 @inject("store")
-@inject("chatStore")
 
 @observer
 export default class App extends Component {
     render() {
-        const isLoggedIn = this.props.store.userStore.authenticated;
+        // const isLoggedIn = this.props.store.userStore.authenticated;
 
         return (
             <Router>
                 <div className="layout">
                      <Menu />
+                    л
 
                     <Switch>
-                        <Redirect
-                            exact
-                            from='/'
-                            to='/coins'
-                        />
-
-                        <PrivateRoute
-                            path="/exchanges"
-                        />
-
                         <Route
-                            exact
-                            path="/login"
-                            component={Login}
+                            component={Start}
                         />
 
-                        <Route
-                            component={NotFound}
                         />
                     </Switch>
 
-                    {isLoggedIn && <Notifications />}
+
 
                     {process.env.NODE_ENV == "development" && <DevTools position={{ bottom: 5, right: 20 }}/>}
                 </div>

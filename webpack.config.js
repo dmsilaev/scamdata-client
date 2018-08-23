@@ -26,7 +26,7 @@ module.exports = {
     devServer: {
         hot: true,
         contentBase: path.resolve(__dirname, "dist"),
-        port: 9001,
+        port: 9000,
         host: "0.0.0.0",
         publicPath: "/",
         historyApiFallback: true,
@@ -34,7 +34,7 @@ module.exports = {
         overlay: false,
         proxy: [{
             context: ['/api/**'],
-            target: 'http://localhost:3001',
+            target: 'http://localhost:3000',
             secure: false,
             changeOrigin: true,
             autoRewrite: true,
