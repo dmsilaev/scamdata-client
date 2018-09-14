@@ -12,7 +12,7 @@ import {
 //
 import Menu from './shared/components/Menu';
 // import Notifications from "./Notifications";
-// import Orders from "./Orders";
+import Coins from "./Coins";
 import Start from "./Start";
 // import NotFound from "./NotFound";
 //
@@ -27,17 +27,13 @@ export default class App extends Component {
             <Router>
                 <div className="layout">
                      <Menu />
-                    л
 
                     <Switch>
                         <Route
-                            component={Start}
-                        />
-
+                          path="/coins"
+                          component={Coins}
                         />
                     </Switch>
-
-
 
                     {process.env.NODE_ENV == "development" && <DevTools position={{ bottom: 5, right: 20 }}/>}
                 </div>

@@ -1,15 +1,15 @@
-.orders-table {
+.coins-table {
   display: table;
   width: 100%;
 
-  .orders-table__header {
+  .coins-table__header {
     display: table-header-group;
   }
 
-  .orders-table__body {
+  .coins-table__body {
     display: table-row-group;
 
-    .orders-table__tr {
+    .coins-table__tr {
       cursor: pointer;
 
       &.active, &:hover {
@@ -18,18 +18,18 @@
     }
   }
 
-  .orders-table__tr {
+  .coins-table__tr {
     display: table-row;
     width: 100%;
 
     &:last-child {
-      .orders-table__th, .orders-table__td {
+      .coins-table__th, .coins-table__td {
         border-bottom: none;
       }
     }
   }
 
-  .orders-table__th, .orders-table__td {
+  .coins-table__th, .coins-table__td {
     position: relative;
     display: table-cell;
     padding-left: 1rem;
@@ -46,7 +46,7 @@
     &.created_at { width: 10%; }
   }
 
-  .orders-table__th {
+  .coins-table__th {
     background-color: #EAE9E4;
     font-weight: bold;
 
@@ -70,7 +70,7 @@
     }
   }
 
-  .orders-table__filter {
+  .coins-table__filter {
     width: 100%;
     // height: 100%;
     padding: 0;
